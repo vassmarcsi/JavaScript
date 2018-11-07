@@ -7,7 +7,7 @@
         <title>Űrlap</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="style/urlap.css">
+        <link rel="stylesheet" href="style/urlap.css" type="text/css">
         <script src="JS/urlap.js"></script>
     </head>
     <body onload="regForm()">
@@ -15,16 +15,16 @@
             <form>
                 Felhasználónév: <input type="text" id="username" name="username" placeholder="Felhasználónév" size="30" required minlength="8" maxlength="25" onblur="userCheck()">
                 <span id="userNameError" class="error"></span>
-                <br><br>
+                <br>
                 Jelszó: <input type="password" id="password" name="password" placeholder="Jelszó" required>
-                <br><br>
+                <br>
                 Jelszó újra: <input type="password" id="passwordagain" name="passwordagain" placeholder="Jelszó" required>
                 <!-- Ez egy megjegyzés, így kell csinálni -->
-                <br><br>
+                <br>
                 E-mail cím: <input type="email" id="email" name="email" placeholder="valami@host.hu" required>
-                <br><br>
+                <br>
                 Születési dátum: <input type="date" id="datum" name="datum" required min="1920-01-01" max="2000-12-31">
-                <br><br>
+                <br>
                 Neme: <br>
                 <input type="radio" name="gender" id="genderno" value="no" required>                
                 <label>Nő</label>
@@ -32,11 +32,11 @@
                 <input type="radio" name="gender" id="genderferfi" value="ferfi" required>
                 <!-- A name tulajdonságnak ugyanannak kell lennim hogy egyként kezelje -->
                 <label>Férfi</label>
-                <br><br>
+                <br>
                 Irányítószám: <input type="number" id="zipcode" name="zipcode" min="1000" max="9999" required>
-                <br><br>
+                <br>
                 <input type="checkbox" name="aszf" id="aszf"> Elfogadom az általános szerződési feltételeket.
-                <br><br>
+                <br>
                 <input type="submit" value="Regisztráció" onclick="userCheck2(form)">
             </form>
         
