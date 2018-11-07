@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<!-- www.caniuse.com >> megnézhetem, hogy melyik böngésző támogatja az adott kódot -->
+
+<html>
+    <head>
+        <title>Űrlap</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="JS/urlap.js"></script>
+    </head>
+    <body>
+        <div id="content">
+            <form>
+                Felhasználónév: <input type="text" id="username" name="username" placeholder="Felhasználónév" size="30" required minlength="8" maxlength="25">
+                <br><br>
+                Jelszó: <input type="password" id="password" name="password" placeholder="Jelszó" required>
+                <br><br>
+                Jelszó újra: <input type="password" id="passwordagain" name="passwordagain" placeholder="Jelszó" required>
+                <!-- Ez egy megjegyzés, így kell csinálni -->
+                <br><br>
+                E-mail cím: <input type="email" id="email" name="email" placeholder="valami@host.hu" required>
+                <br><br>
+                Születési dátum: <input type="date" id="datum" name="datum" required min="1920-01-01" max="2000-12-31">
+                <br><br>
+                Neme: <br>
+                <input type="radio" name="gender" id="gender" value="no" required>                
+                <label>Nő</label>
+                <br>
+                <input type="radio" name="gender" id="gender" value="ferfi" required>
+                <!-- A name tulajdonságnak ugyanannak kell lennim hogy egyként kezelje -->
+                <label>Férfi</label>
+                <br><br>
+                Irányítószám: <input type="number" id="zipcode" name="zipcode" min="1000" max="9999" required>
+                <br><br>
+                <input type="checkbox" name="aszf" id="aszf"> Elfogadom az általános szerződési feltételeket.
+                <br><br>
+                <input type="submit" value="Regisztráció">
+            </form>
+        
+        </div>
+    </body>
+</html>
