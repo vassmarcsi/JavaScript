@@ -9,10 +9,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="JS/urlap.js"></script>
     </head>
-    <body>
+    <body onload="regForm()">
         <div id="content">
             <form>
-                Felhasználónév: <input type="text" id="username" name="username" placeholder="Felhasználónév" size="30" required minlength="8" maxlength="25">
+                Felhasználónév: <input type="text" id="username" name="username" placeholder="Felhasználónév" size="30" required minlength="8" maxlength="25" onblur="userCheck()">
+                <span id="userNameError"></span>
                 <br><br>
                 Jelszó: <input type="password" id="password" name="password" placeholder="Jelszó" required>
                 <br><br>
@@ -24,10 +25,10 @@
                 Születési dátum: <input type="date" id="datum" name="datum" required min="1920-01-01" max="2000-12-31">
                 <br><br>
                 Neme: <br>
-                <input type="radio" name="gender" id="gender" value="no" required>                
+                <input type="radio" name="gender" id="genderno" value="no" required>                
                 <label>Nő</label>
                 <br>
-                <input type="radio" name="gender" id="gender" value="ferfi" required>
+                <input type="radio" name="gender" id="genderferfi" value="ferfi" required>
                 <!-- A name tulajdonságnak ugyanannak kell lennim hogy egyként kezelje -->
                 <label>Férfi</label>
                 <br><br>
@@ -35,7 +36,7 @@
                 <br><br>
                 <input type="checkbox" name="aszf" id="aszf"> Elfogadom az általános szerződési feltételeket.
                 <br><br>
-                <input type="submit" value="Regisztráció">
+                <input type="submit" value="Regisztráció" onclick="userCheck2(form)">
             </form>
         
         </div>
