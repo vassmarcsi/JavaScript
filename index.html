@@ -7,13 +7,14 @@
         <title>Űrlap</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style/urlap.css">
         <script src="JS/urlap.js"></script>
     </head>
     <body onload="regForm()">
         <div id="content">
             <form>
                 Felhasználónév: <input type="text" id="username" name="username" placeholder="Felhasználónév" size="30" required minlength="8" maxlength="25" onblur="userCheck()">
-                <span id="userNameError"></span>
+                <span id="userNameError" class="error"></span>
                 <br><br>
                 Jelszó: <input type="password" id="password" name="password" placeholder="Jelszó" required>
                 <br><br>
